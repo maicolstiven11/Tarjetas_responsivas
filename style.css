@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box; /* Incluye padding y border dentro del ancho/alto total del elemento */
+    margin: 0;              /* Elimina márgenes por defecto */
+    padding: 0;             /* Elimina relleno por defecto */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente base del sitio */
+    background-color: #f2f2f2;      /* Color de fondo suave */
+    padding: 20px;                  /* Espacio interior general */
+}
+
+h1 {
+    text-align: center;     /* Centra el título */
+    margin-bottom: 30px;    /* Espacio debajo del título */
+}
+
+.tarjetas {
+    display: grid;                  /* Usa grid layout */
+    grid-template-columns: 1fr;    /* Una sola columna (modo móvil) */
+    gap: 20px;                     /* Espacio entre tarjetas */
+}
+
+.tarjeta {
+    background-color: white;                               /* Fondo blanco para la tarjeta */
+    padding: 15px;                                          /* Espacio interno */
+    border-radius: 10px;                                    /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);               /* Sombra para profundidad */
+    text-align: center;                                     /* Centra el contenido */
+    transition: transform 0.3s;                             /* Animación suave al pasar el mouse */
+}
+
+.tarjeta:hover {
+    transform: scale(1.03);  /* Hace zoom suave al pasar el mouse */
+}
+
+.tarjeta img {
+    width: 100%;              /* Imagen ocupa todo el ancho de la tarjeta */
+    height: 150px;            /* Altura fija */
+    object-fit: cover;        /* La imagen cubre sin deformarse */
+    border-radius: 8px;       /* Bordes redondeados de la imagen */
+    margin-bottom: 10px;      /* Espacio debajo de la imagen */
+}
+
+.tarjeta h2 {
+    font-size: 20px;         /* Tamaño del título de la tarjeta */
+    margin-bottom: 10px;     /* Espacio debajo del título */
+}
+
+.tarjeta p {
+    font-size: 14px;         /* Tamaño del texto */
+    margin-bottom: 15px;     /* Espacio debajo del párrafo */
+    color: #555;             /* Color gris oscuro para mejor lectura */
+}
+
+.tarjeta button {
+    padding: 10px 20px;          /* Tamaño del botón */
+    background-color: #007bff;  /* Azul principal */
+    color: white;               /* Texto blanco */
+    border: none;               /* Sin borde */
+    border-radius: 5px;         /* Bordes redondeados */
+    cursor: pointer;            /* Cambia el cursor al pasar sobre el botón */
+}
+
+.tarjeta button:hover {
+    background-color: #0056b3;  /* Color más oscuro al pasar el mouse */
+}
+
+/* Diseño de múltiples columnas en pantallas grandes */
+@media (min-width: 600px) {
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columnas desde 600px de ancho */
+    }
+}
+
+@media (min-width: 900px) {
+    .tarjetas {
+        grid-template-columns: repeat(3, 1fr);  /* 3 columnas desde 900px de ancho */
+    }
+}
