@@ -72,7 +72,7 @@ h1 {
     background-color: #0056b3;
 }
 
-/* Responsive: dos tarjetas por fila desde 600px */
+/* Responsive: dos tarjetas por fila desde 768px */
 @media (min-width: 768px) {  /*tablet*/
     .tarjeta {
         height: 350px;
@@ -80,7 +80,7 @@ h1 {
     }
 }
 
-/* Responsive: tres tarjetas por fila desde 900px */
+/* Responsive: tres tarjetas por fila desde 1024px */
 @media (min-width: 1024px) {  /*desktop*/
     .tarjeta {
         height: 400px;
